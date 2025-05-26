@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Submit Complaint</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
+      padding: 40px;
+      display: flex;
+      justify-content: center;
+    }
+    form {
+      background: white;
+      padding: 25px 30px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+      max-width: 400px;
+      width: 100%;
+    }
+    label {
+      font-weight: bold;
+      margin-bottom: 8px;
+      display: block;
+      color: #333;
+    }
+    input[type="text"] {
+      width: 100%;
+      padding: 10px 12px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+      margin-bottom: 20px;
+      transition: border-color 0.3s ease;
+    }
+    input[type="text"]:focus {
+      border-color: #0070d2;
+      outline: none;
+    }
+    input[type="submit"] {
+      background-color: #0070d2;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      padding: 12px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      width: 100%;
+      transition: background-color 0.3s ease;
+    }
+    input[type="submit"]:hover {
+      background-color: #005fb2;
+    }
+  </style>
+</head>
+<body>
+
+  <form action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8&orgId=00DgL000002B6H6" method="POST">
+
+    <input type="hidden" name="orgid" value="00DgL000002B6H6" />
+    <input type="hidden" name="retURL" value="http://www.google.com" />
+    <input type="hidden" id="external" name="external" value="1" />
+
+    <label for="complaint">Complaint</label>
+    <input id="00NgL00000ybIzV" maxlength="250" name="00NgL00000ybIzV" type="text" placeholder="Enter your complaint here" required />
+
+    <input type="submit" name="submit" value="Submit Complaint" />
+
+  </form>
+
+</body>
+</html>
